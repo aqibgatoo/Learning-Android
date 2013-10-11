@@ -7,9 +7,11 @@ import android.app.Activity;
 import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ContextMenu.ContextMenuInfo;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
 
@@ -34,10 +36,30 @@ public class MainActivity extends Activity {
 		
 	}
 	@Override
+	public boolean onContextItemSelected(MenuItem item) {
+		
+		
+		  int id=item.getItemId();
+		  
+		switch (id) {
+		case R.id.item1:
+			Toast.makeText(this,"item 1 selected ",Toast.LENGTH_LONG).show();
+			
+			break;
+
+		default:
+			finish();
+		}
+		
+		
+		return super.onContextItemSelected(item);
+	
+		
+	}
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
 }
