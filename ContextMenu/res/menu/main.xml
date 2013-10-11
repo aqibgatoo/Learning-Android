@@ -1,0 +1,13 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    <group android:id="@+id/group1" android:checkableBehavior="all">
+        <item android:id="@+id/item1" android:title="@string/item_1"></item>
+        <item android:id="@+id/item2" android:title="@string/item2"></item>
+    </group>
+
+</menu>
